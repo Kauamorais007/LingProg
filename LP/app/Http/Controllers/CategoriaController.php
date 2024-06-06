@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\produto;
+use App\Models\Categoria;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
-class ProdutoController extends Controller
+class CategoriaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view ('layouts.produtos');
+        //
     }
 
     /**
@@ -35,15 +34,15 @@ class ProdutoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(produto $produto)
+    public function show(Categoria $categoria)
     {
-        $categoria=$produto->categoria;
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(produto $produto)
+    public function edit(Categoria $categoria)
     {
         //
     }
@@ -51,7 +50,7 @@ class ProdutoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, produto $produto)
+    public function update(Request $request, Categoria $categoria)
     {
         //
     }
@@ -59,9 +58,8 @@ class ProdutoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(produto $produto)
+    public function destroy(Categoria $categoria)
     {
         //
     }
-    
 }
