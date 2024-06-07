@@ -28,9 +28,13 @@ class ProdutoController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        //
-    }
+{
+    // Cadastrar no banco de dados na tabela produtos os valores de todos os campos
+    Produto::create($request->all());
+
+    // Redirecionar o usuário, enviar a mensagem de sucesso
+    return redirect()->route('produto.show')->with('success', 'Produto cadastrado com sucesso');
+}
 
     /**
      * Display the specified resource.

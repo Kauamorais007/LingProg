@@ -7,8 +7,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/produtos', [ProdutoController::class, 'index'])->name('produtos.index');
+Route::post('/cadastrarProduto', [ProdutoController::class, 'store'])->name('produto.store');
 
+Route::get('/produtos', [ProdutoController::class, 'index'])->name('produtos.index');
+    
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
