@@ -16,6 +16,9 @@
     <label>Valor: </label>
     <input type="text" name="valor" id="valor" placeholder="Usar '.' separar real do centavo" required><br><br>
 
+    <label>Catgoria: </label>
+    <input type="binary" name="categoria_id" id="categoria_id" placeholder="1 - infantil, 2 - adulto" required><br><br>
+
     <button type="submit">Cadastrar</button>
 
 </form>
